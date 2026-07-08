@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/padding_spacing_dp16"
+        android:paddingTop="@dimen/padding_spacing_dp16"
+        android:paddingBottom="@dimen/padding_spacing_dp16" />
+
+    <TextView
+        android:id="@+id/empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/padding_spacing_dp16"
+        android:text="@string/server_list_empty"
+        android:textColor="@color/home_text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</FrameLayout>
+

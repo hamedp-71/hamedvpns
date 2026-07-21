@@ -1,3 +1,5 @@
+**[Readme-FA](https://github.com/hamedp-71/hamedvpns/blob/main/ReadmeFA.md)**
+
 <div align="center">
 
 # ⚡️ HamedVpns

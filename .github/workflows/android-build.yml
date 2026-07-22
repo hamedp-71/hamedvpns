@@ -19,21 +19,20 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
+        # ویژگی کش گریدل از اینجا حذف شد تا ارور برطرف شود
 
     - name: Find Project and Build
       run: |
-        # این دستور تمام پوشه‌ها را می‌گردد تا فایل اجرای اندروید را پیدا کند
         GRADLE_PATH=$(find . -name "gradlew" | head -n 1)
         
         if [ -z "$GRADLE_PATH" ]; then
           echo "❌ خطا: فایل gradlew در هیچکدام از پوشه‌های شما پیدا نشد!"
-          echo "لطفا مطمئن شوید که سورس اندروید استودیو را کامل آپلود کرده‌اید."
+          echo "این یعنی سورس اندروید شما ناقص است یا با نرم‌افزار دیگری ساخته شده است."
           exit 1
         fi
         
         DIR_NAME=$(dirname "$GRADLE_PATH")
-        echo "✅ پروژه اندروید با موفقیت در پوشه $DIR_NAME پیدا شد."
+        echo "✅ پروژه اندروید در پوشه $DIR_NAME پیدا شد."
         
         cd "$DIR_NAME"
         chmod +x gradlew
